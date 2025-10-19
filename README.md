@@ -49,7 +49,7 @@ It serves as part of a research exploration into interactive education and simul
 ---
 
 ## 🌐 Live Preview
-👉 [https://your-username.github.io/bootcamp-web/](https://your-username.github.io/bootcamp-web/)
+👉 https://justin-perrie-rmit.github.io/bootcamp/
 
 ---
 
