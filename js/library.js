@@ -1,0 +1,22 @@
+var library =
+{
+    list:
+    {
+        "desk":
+        {
+            name:"desk",
+            frames:1,
+            radius:20,
+            selectable:true,
+            passableGrid:[
+				[1]
+			],
+        },
+    },
+    defaults:
+    {
+        outputTest:function()
+        {
+		}   
+    }
+}

@@ -1,0 +1,45 @@
+var props =
+{
+	list:
+	{
+        "blue_desk":
+		{
+			name:"blue_desk",
+            frames:1
+        },
+        "green_desk":
+		{
+			name:"green_desk",
+            frames:1
+        },
+        "red_desk":
+		{
+			name:"red_desk",
+            frames:1
+        },
+        "chair":
+		{
+			name:"char",
+            frames:1
+        },
+        "bookshelf":
+		{
+			name:"bookshelf",
+            frames:1
+        },
+        "bookshelf_2":
+		{
+			name:"bookshelf_2",
+            frames:1
+        },        
+        "platform":
+		{
+			name:"platform",
+            frames:1
+        },
+    },
+    default:
+    {
+        
+    }
+}

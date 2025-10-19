@@ -1,0 +1,28 @@
+var resources = 
+{
+    list:
+    {
+        "oil":
+		{
+            name:"oil",
+            locked:undefined,
+            frames:1,
+            baseWidth:40,
+			baseHeight:20,
+            passableGrid:[
+				[1]
+			],
+        },        
+        "water":
+        {
+            name:"water",
+            locked:undefined,
+            frames:1,
+            baseWidth:40,
+			baseHeight:20,
+            passableGrid:[
+				[1,1]
+			],
+        }
+    },
+}

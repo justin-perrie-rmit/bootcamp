@@ -1,0 +1,26 @@
+/* Unused */
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('/fonts/FiraCode-VariableFont_wght.ttf') format('truetype');
+    /* Add other font formats for cross-browser compatibility */
+}
+
+@font-face {
+    font-family: 'ZenOs';
+    src: url('/fonts/zenos.ttf') format('truetype');
+    /* Add other font formats for cross-browser compatibility */
+}
+
+body
+{
+	margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide scrollbars */
+    background-color: #000;
+    /*height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}

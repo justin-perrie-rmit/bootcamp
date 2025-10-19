@@ -1,0 +1,25 @@
+var lights =
+{
+    list:
+    {
+        "temporary_post":
+		{
+            name:"temporary_post",
+            frames:1,
+            sfx:true,
+            sfxOn:true,
+            baseWidth:40,
+			baseHeight:20,            
+            buildableGrid:[
+				[1,1],
+				[1,1],
+				[1,1]
+			],
+			passableGrid:[
+				[1,1],
+				[1,1],
+				[1,1]
+			],
+        }
+    },
+}
