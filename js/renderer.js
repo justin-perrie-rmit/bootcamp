@@ -3821,8 +3821,8 @@ var renderer = {
                 {
                     economy.setPayout();
 
-                    this.payText = new PIXI.Text("Pay: ", {fill: 'white'});
-                    this.payText.text = "Pay: " + economy.cash;
+                    this.payText = new PIXI.Text("Savings: ", {fill: 'white'});
+                    this.payText.text = "Savings: " + economy.cash;
                     this.payText.position.set(
                         game.level.text[i].x,
                         game.level.text[i].y

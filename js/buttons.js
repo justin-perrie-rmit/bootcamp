@@ -14,6 +14,12 @@ var buttons =
             frames:1,
             visible:0
         },
+        "next":
+		{
+            name:"next",
+            frames:1,
+            visible:0
+        },
         "first_survey":
 		{
             name:"first_survey",

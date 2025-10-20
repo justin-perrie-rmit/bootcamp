@@ -31,7 +31,7 @@ var maps =
             "timer":9999999999
         },
         "buttons":[
-            {"type":"buttons", "name":"start", "x":920, "y":1030, "action":()=>{
+            {"type":"buttons", "name":"next", "x":920, "y":1030, "action":()=>{
                 renderer.clock.reset();
                 game.endLevel();
                 game.nextLevel();
@@ -50,6 +50,55 @@ var maps =
         }
         ]
     }, 
+    {
+        "name":"controls",
+        "mapImages":"images/maps/controls/",       
+        "numberOfHorizontalTiles":3,
+        "numberOfVerticalTiles":3,
+        "backgroundWidth":1920,
+        "backgroundHeight":1080,
+        "startX":0,
+        "startY":0,
+        "mapGridWidth":96,
+        "mapGridHeight":54,
+        "additional_requirements":[
+        ],
+        "items": [
+
+        ],
+        "lights" : [
+            // {"type":"lights","name":"temporary_post","x":21,"y":95,"on":true,"uid":-282},
+        ],
+        "thresholds":[
+            //{"type":"thresholds","name":"auto_door","x":117,"y":53,"direction":0,"uid":-151}
+        ],
+        // "text":[
+        //     {"type":"text", "name":"pay", "x":900, "y":100}
+        // ],
+        "clock":
+        {
+            "timer":9999999999
+        },
+        "buttons":[
+            {"type":"buttons", "name":"start", "x":920, "y":830, "action":()=>{
+                renderer.clock.reset();
+                game.endLevel();
+                game.nextLevel();
+                //economy.send();
+            }},
+        ],    
+        "triggers" : [
+        {
+            "type":"conditional",
+            "condition":() => {
+                return false;
+            },     
+            "action":() => {
+
+            } 
+        }
+        ]
+    },
     {
         "name":"university",
         "mode":"learning",
@@ -105,7 +154,7 @@ var maps =
         ],
         "clock":
         {
-            "timer":2
+            "timer":120
         },
         "triggers" : [
         {
