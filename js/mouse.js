@@ -332,7 +332,7 @@ var mouse =
             
             itemY = itemY - item.radius / 2;
 
-            if(Math.pow((mouse.x + game.offsetX * productionRatioX) - itemX, 2) + Math.pow((mouse.y + game.offsetY * productionRatio) - itemY, 2) < Math.pow(item.radius, 2))
+            if(Math.pow((mouse.x + game.offsetX * productionRatioX) - itemX, 2) + Math.pow((mouse.y + game.offsetY * productionRatio) - itemY, 2) < Math.pow(item.radius * 2, 2))
             {
                 return item;
             }
