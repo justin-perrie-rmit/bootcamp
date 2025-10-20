@@ -193,6 +193,9 @@ var game = {
 
         mouse.update();
         sidebar.update();
+        
+        if(this.player)
+            this.player.update();
 
         if(game.level.ai)
             ai.update();

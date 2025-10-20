@@ -105,7 +105,7 @@ var maps =
         ],
         "clock":
         {
-            "timer":120
+            "timer":2
         },
         "triggers" : [
         {

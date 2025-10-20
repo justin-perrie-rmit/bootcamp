@@ -105,6 +105,10 @@ var player =
 		distanceToLibrarian:0,
 		currentStudent:undefined,
 		currentTeacher:undefined,
+		moveUpDirection:false,
+		moveDownDirection:false,
+		moveLeftDirection:false,
+		moveRightDirection:false,
 		isArmy:true,
 		isNavy:false,
 		isAirforce:false,
@@ -234,6 +238,70 @@ var player =
 
 			renderer.clearConversationText();
 			conversations.display(this);
+
+			if(this.moveUpDirection)
+			{
+				const newUpMovement = this.y - 0.1;
+
+				if(game.currentTerrainMapPassableGrid[
+                Math.floor(newUpMovement)][Math.floor(this.x)]
+                 != flags.CELL_COLLISION_MODE_FULL)
+				{
+					this.y = (this.y - 0.1);
+					this.sprite.y = (this.sprite.y - (0.1
+						* game.gridSize));
+						
+					this.animate();
+				}
+			}
+
+			if(this.moveDownDirection)
+			{
+				const newDownMovement = this.y + 0.1;
+
+				if(game.currentTerrainMapPassableGrid[
+                Math.floor(newDownMovement)][Math.floor(this.x)]
+                 != flags.CELL_COLLISION_MODE_FULL)
+				{
+					this.y = (this.y + 0.1);
+					this.sprite.y = (this.sprite.y + (0.1
+						* game.gridSize));
+												
+					this.animate();
+				}
+			}
+
+			if(this.moveLeftDirection)
+			{
+				const newLeftMovement = this.x - 0.1;
+
+				if(game.currentTerrainMapPassableGrid[
+                Math.floor(this.y)][Math.floor(newLeftMovement)]
+                 != flags.CELL_COLLISION_MODE_FULL)
+				{
+					this.x = (this.x - 0.1);
+					this.sprite.x = (this.sprite.x - (0.1
+						* game.gridSize));
+												
+					this.animate();
+				}
+			}
+
+			if(this.moveRightDirection)
+			{
+				const newRightMovement = this.x + 0.1;
+
+				if(game.currentTerrainMapPassableGrid[
+                Math.floor(this.y)][Math.floor(newRightMovement)]
+                 != flags.CELL_COLLISION_MODE_FULL)
+				{
+					this.x = (this.x + 0.1);
+					this.sprite.x = (this.sprite.x + (0.1
+						* game.gridSize));
+												
+					this.animate();
+				}
+			}
 		},
 
 		init()
@@ -886,6 +954,38 @@ var player =
 			}
 		},
 
+		moveRight:function()
+		{
+			this.direction = 2;
+			this.sprite.texture = renderer.texturesMap.get(this.team + "_" + this.name)
+				[this.direction];
+			this.moveRightDirection = true;
+		},
+
+		moveLeft:function()
+		{	
+			this.direction = 6;
+			this.sprite.texture = renderer.texturesMap.get(this.team + "_" + this.name)
+				[this.direction];
+			this.moveLeftDirection = true;
+		},
+
+		moveUp:function()
+		{
+			this.direction = 0;
+			this.sprite.texture = renderer.texturesMap.get(this.team + "_" + this.name)
+				[this.direction];
+			this.moveUpDirection = true;
+		},
+
+		moveDown:function()
+		{
+			this.direction = 4;
+			this.sprite.texture = renderer.texturesMap.get(this.team + "_" + this.name)
+				[this.direction];
+			this.moveDownDirection = true;
+		},
+
 		/**
 		 * Turns to the correction direction to start along
 		 * the path.
@@ -1403,6 +1503,8 @@ var player =
 		{
             if(this.orders.type != "stand" && this.orders.type != "firing" && !(this.waitForThreshold))
 				this.animate();
+
+			
 
 			this.animateCollision();
 
